@@ -1,0 +1,55 @@
+@mixin w100_h100 {
+   width: 100%;
+   height: 100%;
+}
+
+@mixin w100 {
+   width: 100%;
+}
+
+@mixin h100 {
+   height: 100%;
+}
+
+@mixin h_vh100 {
+   height: 100vh;
+}
+
+@mixin vh($vh) {
+   height: $vh;
+}
+
+@mixin width($width) {
+   width: $width;
+}
+
+@mixin height($height) {
+   height: $height;
+}
+
+@mixin d_none {
+   position: absolute;
+   left: -9999px;
+   transition: 0.5s;
+   display: none;
+}
+
+@mixin z_index($index) {
+   z-index: $index;
+}
+
+@mixin m_top($m_top, $fr) {
+   margin-top: $m_top;
+}
+
+@mixin grid_cols_1 {
+   grid-template-columns: repeat(1, 1fr);
+}
+
+@mixin grid_cols_2 {
+   grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin grid_cols_3 {
+   grid-template-columns: repeat(3, 1fr);
+}

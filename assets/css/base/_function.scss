@@ -1,0 +1,9 @@
+// text transfrom
+$text_transform: capitalize, uppercase, lowercase;
+@each $i in $text_transform {
+  .text-#{$i} {
+    text-transform: $i;
+  }
+}
+
+// border
