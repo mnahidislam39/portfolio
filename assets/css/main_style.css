@@ -175,7 +175,7 @@ p {
 
 .main_area .dark_is_on .section {
   background-color: var(--light) !important;
-  margin-top: 0 !important;
+  margin-top: none !important;
 }
 .main_area .dark_is_on .main_bg {
   background: #161616 !important;
