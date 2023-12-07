@@ -698,18 +698,24 @@ p {
 .main_area .container .about .about_contents .about_my_skill .skill .font_end .skills {
   grid-template-columns: repeat(1, 1fr);
   gap: 5px;
-  justify-items: center;
-}
-.main_area .container .about .about_contents .about_my_skill .skill .font_end .skills .count {
-  display: none;
+  justify-items: start;
 }
 .main_area .container .about .about_contents .about_my_skill .skill .single_skill {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-transform: uppercase;
   position: relative;
+  width: 90%;
+}
+.main_area .container .about .about_contents .about_my_skill .skill .single_skill::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid var(--primary);
 }
 @keyframes left {
   100% {
@@ -727,15 +733,16 @@ p {
   text-align: center;
   z-index: 1;
 }
+.main_area .container .about .about_contents .about_my_skill .skill .single_skill .count {
+  color: var(--primary);
+}
 .main_area .container .about .about_contents .about_my_skill .skill .back_end {
   gap: 20px;
 }
 .main_area .container .about .about_contents .about_my_skill .skill .back_end .skills {
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
-}
-.main_area .container .about .about_contents .about_my_skill .skill .back_end .skills .count {
-  display: none;
+  width: 100%;
 }
 .main_area .container .resume .video_contents .video {
   display: grid;
@@ -1091,7 +1098,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background: #f6f6f6;
+    background: #ebebeb;
     opacity: 1;
     z-index: -9999;
   }
@@ -1175,6 +1182,7 @@ p {
     position: absolute;
     box-shadow: 8px 0 15px -10px var(--bg-dark);
     border-radius: 5px;
+    overflow: hidden;
   }
   .main_area .container .home .home_contents {
     flex-direction: column;
