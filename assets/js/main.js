@@ -14,6 +14,8 @@ const go_top = id('go_top');
 const logo_img = id('logo_img');
 const light_mode = id('light_mode');
 const dark_mode = id('dark_mode');
+const contactForm = id('contactForm');
+const email = id('email');
 // selcet class
 const about_link = query('.about_link');
 const resume_link = query('.resume_link');
@@ -41,6 +43,8 @@ window.addEventListener('scroll', () => {
   }
 
 })
+
+
 
 
 // nav_li

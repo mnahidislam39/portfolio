@@ -18,8 +18,6 @@
   <!---------components CSS ------->
   <link rel="stylesheet" href="assets/css/plugins/components.css" />
   <!---------carousel CSS ------->
-  <link rel="stylesheet" href="assets/css/plugins/carousel.css" />
-  <!---------carousel CSS ------->
   <link rel="stylesheet" href="assets/css/plugins/magnifin popup.min.css" />
   <!---------Main CSS ------->
   <link rel="stylesheet" href="assets/css/main_style.css" />
@@ -545,9 +543,9 @@
               </div>
             </div>
             <div class="contect_right pt-20" id="contact_me">
-              <form action="#" method="post" class="form d-grid">
+              <form class="form d-grid" id="contactForm" action="submit.php" method="post">
                 <input type="text" class="name" name="name" required placeholder="Full Name" />
-                <input type="text" class="email" name="email" required placeholder="Email Adress" />
+                <input type="text" class="email" name="email" id="email" required placeholder="Email Adress" />
                 <textarea class="textarea" name="message" required placeholder="Message"></textarea>
                 <input type="submit" class="submit" name="submit" id="submit" value="send message" />
               </form>
@@ -575,8 +573,8 @@
   <script src="assets/js/JQuery.js"></script>
   <!------------ magnifin JS ----------->
   <script src="assets/js/magnifin.min.js"></script>
-  <!------------ bootsrtrap JS ----------->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <!------------ smtp JS ----------->
+  <!-- <script src="assets/js/smtp.js"></script> -->
   <!------------ function JS ----------->
   <script src="assets/js/function.js"></script>
   <!------------ Main JS ----------->
