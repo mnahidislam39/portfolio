@@ -180,18 +180,39 @@ p {
 .main_area .dark_is_on .main_bg {
   background: #161616 !important;
 }
+.main_area .dark_is_on .about .about_contents .about_info .ab_right ul li strong {
+  color: var(--dark) !important;
+}
+.main_area .dark_is_on .service .service_contents .single_service:hover {
+  box-shadow: 0 0 5px -1px var(--dark) !important;
+}
+.main_area .dark_is_on .service .service_contents .single_service:hover span {
+  color: var(--primary) !important;
+}
 .main_area .dark_is_on .service .service_contents .single_service span,
-.main_area .dark_is_on .service .service_contents .single_service p,
-.main_area .dark_is_on .service .service_contents .single_service a {
+.main_area .dark_is_on .service .service_contents .single_service p {
   color: var(--dark) !important;
 }
 .main_area .dark_is_on .service .service_contents .single_service a {
+  background-color: var(--dark) !important;
+}
+.main_area .dark_is_on .service .service_contents .single_service a:hover {
   background-color: var(--primary) !important;
+  color: var(--dark) !important;
 }
 .main_area .dark_is_on .portfolio .portfolios .catagory ul li {
   color: var(--dark);
 }
 .main_area .dark_is_on .portfolio .portfolios .catagory ul .activeCaLi .active {
+  color: var(--dark) !important;
+}
+.main_area .dark_is_on .portfolio .portfolios .portfolio_contents .single_portfolio .project_icon a {
+  color: var(--dark) !important;
+}
+.main_area .dark_is_on .contact .contact_field .contect_right .form #submit {
+  color: var(--dark) !important;
+}
+.main_area .dark_is_on .contact .contact_field .contect_right .form #submit:hover {
   color: var(--dark) !important;
 }
 
@@ -1068,7 +1089,7 @@ p {
 }
 .main_area .container .contact .contact_field .contect_right .form #submit:hover {
   background-color: var(--light);
-  color: var(--green-500);
+  color: var(--light);
 }
 .main_area .container .contact .contact_footer p {
   font-size: 12px;

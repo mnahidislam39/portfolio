@@ -13,18 +13,46 @@
       background: #161616 !important;
     }
 
+    .about {
+      .about_contents {
+        .about_info {
+          .ab_right {
+            ul {
+              li {
+                strong {
+                  color: var(--dark) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     .service {
       .service_contents {
         .single_service {
+          &:hover {
+            span {
+              color: var(--primary) !important;
+            }
+
+            box-shadow: 0 0 5px -1px var(--dark) !important;
+          }
 
           span,
-          p,
-          a {
+          p {
             color: var(--dark) !important;
           }
 
           a {
-            background-color: var(--primary) !important;
+            background-color: var(--dark) !important;
+
+            &:hover {
+              background-color: var(--primary) !important;
+              color: var(--dark) !important;
+
+            }
           }
         }
       }
@@ -46,8 +74,36 @@
             }
           }
         }
+
+
+        .portfolio_contents {
+          .single_portfolio {
+            .project_icon {
+              a {
+                color: var(--dark) !important;
+              }
+            }
+          }
+
+        }
       }
 
+    }
+
+    .contact {
+      .contact_field {
+        .contect_right {
+          .form {
+            #submit {
+              color: var(--dark) !important;
+
+              &:hover {
+                color: var(--dark) !important;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1188,7 +1244,7 @@
 
               &:hover {
                 background-color: var(--light);
-                color: var(--green-500);
+                color: var(--light);
               }
             }
           }
