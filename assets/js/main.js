@@ -71,31 +71,7 @@ const phone_width = 992;
 if (window.innerWidth >= desltop_width) {
 
   logo.addEventListener('click', () => {
-    logo.setAttribute('href', '#about');
-    about.classList.add('active');
-    about.classList.add('fade_in');
-    about.classList.remove('fade_out');
-    about.classList.add('animated');
-
-    resume.classList.remove('fade_in');
-    resume.classList.add('fade_out');
-    resume.classList.remove('animated');
-    resume.classList.add('hidden');
-
-    service.classList.remove('fade_in');
-    service.classList.add('fade_out');
-    service.classList.remove('animated');
-    service.classList.add('hidden');
-
-    portfolio.classList.remove('fade_in');
-    portfolio.classList.add('fade_out');
-    portfolio.classList.remove('animated');
-    portfolio.classList.add('hidden');
-
-    contact.classList.remove('fade_in');
-    contact.classList.add('fade_out');
-    contact.classList.remove('animated');
-    contact.classList.add('hidden');
+    logo.setAttribute('href', 'index.html');
 
   })
 
