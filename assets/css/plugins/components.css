@@ -29,14 +29,14 @@ Copyright @copy 2023 All Right Resrved.
  */
 .dark_is_on {
   --dark: #ffffff !important;
-  --light: rgb(50, 50, 50) !important;
+  --light: #323232 !important;
 }
 
 
 
 :root {
 
-  --primary: rgb(120, 204, 109);
+  --primary: #78cc6d;
   --secondary: rgb(20, 108, 67);
   --light: #ffffff;
   --dark: rgb(50, 50, 50);
