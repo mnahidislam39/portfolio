@@ -1,4 +1,8 @@
 // select id
+const side_bar = getId('side_bar');
+const open_nav = getId('open_nav');
+const open = getId('open');
+const close = getId('close');
 const logo = getId('logo');
 const go_top = getId('go_top');
 const logo_img = getId('logo_img');
@@ -37,19 +41,6 @@ window.addEventListener('scroll', () => {
     }
   }
 })
-
-// nav_li
-const nav_li = getAllClass('.nav .ul li');
-nav_li.forEach((item) => {
-  item.addEventListener('click', () => {
-    nav_li.forEach((item) => {
-      item.classList.remove('active');
-    });
-    item.classList.add('active');
-
-  });
-})
-
 // addEventListener condition will work when desktop_width and up 
 if (window.innerWidth >= desktop_width) {
   logo.addEventListener('click', () => {
@@ -187,6 +178,17 @@ dark_mode.addEventListener('click', () => {
   light_mode.classList.add('active');
   container.classList.remove('dark_is_on');
   logo_img.setAttribute('src', 'assets/images/logo/nkb.png');
+})
+// nav_li
+const nav_li = getAllClass('.nav .ul li');
+nav_li.forEach((item) => {
+  item.addEventListener('click', () => {
+    nav_li.forEach((item) => {
+      item.classList.remove('active');
+    });
+    item.classList.add('active');
+
+  });
 })
 // catagory
 let catagory_ul = getAllClass(".catagory_ul li");
