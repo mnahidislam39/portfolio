@@ -1,54 +1,45 @@
-// select id 
-const home = id('home');
-const about = id('about');
-const resume = id('resume');
-const service = id('service');
-const portfolio = id('portfolio');
-const contact = id('contact');
-const side_bar = id('side_bar');
-const open_nav = id('open_nav');
-const open = id('open');
-const close = id('close');
-const logo = id('logo');
-const go_top = id('go_top');
-const logo_img = id('logo_img');
-const light_mode = id('light_mode');
-const dark_mode = id('dark_mode');
-const contactForm = id('contactForm');
-const email = id('email');
+// select id
+const logo = getId('logo');
+const go_top = getId('go_top');
+const logo_img = getId('logo_img');
+const light_mode = getId('light_mode');
+const dark_mode = getId('dark_mode');
+const contactForm = getId('contactForm');
+const email = getId('email');
 // selcet class
-const about_link = query('.about_link');
-const resume_link = query('.resume_link');
-const services_link = query('.services_link');
-const portfolio_link = query('.portfolio_link');
-const contact_link = query('.contact_link');
-const container = query('.container ');
+const about_link = getClass('.about_link');
+const resume_link = getClass('.resume_link');
+const services_link = getClass('.services_link');
+const portfolio_link = getClass('.portfolio_link');
+const contact_link = getClass('.contact_link');
+const container = getClass('.container ');
 
 
-// scroll event
+// desktop_width
+const desktop_width = 1200;
+// laptop_width
+const laptop_width = 1024;
+// tablet_width
+const tablet_width = 768;
+// large_phone_width
+const large_phone_width = 992;
+
+// it will work when window will be scroll
 window.addEventListener('scroll', () => {
   if (window.innerWidth <= 1024) {
     if (window.scrollY > 400) {
-      side_bar.classList.remove('active_left');
-      close.classList.remove('show_nav');
-      open.classList.add('show_nav');
-      go_top.classList.add('active_top');
+      removeClassById('side_bar', 'active_left');
+      removeClassById('close', 'show_nav');
+      addClassById('open', 'show_nav');
+      addClassById('go_top', 'active_top');
     } else {
-      go_top.classList.remove('active_top');
-
+      removeClassById('go_top', 'active_top');
     }
   }
-  if (window.innerWidth >= 992) {
-    side_bar.classList.add('active_left');
-  }
-
 })
 
-
-
-
 // nav_li
-const nav_li = all_class('.nav .ul li');
+const nav_li = getAllClass('.nav .ul li');
 nav_li.forEach((item) => {
   item.addEventListener('click', () => {
     nav_li.forEach((item) => {
@@ -58,26 +49,104 @@ nav_li.forEach((item) => {
 
   });
 })
-// desltop_width
-const desltop_width = 1200;
-// laptop_width
-const laptop_width = 1024;
-// tablet_width
-const tablet_width = 768;
-// phone_width
-const phone_width = 992;
 
-
-if (window.innerWidth >= desltop_width) {
-
+// addEventListener condition will work when desktop_width and up 
+if (window.innerWidth >= desktop_width) {
   logo.addEventListener('click', () => {
-    logo.setAttribute('href', 'index.html');
+    logo.setAttribute('href', '');
+  })
+  getClass('.about_link').addEventListener('click', () => {
+    addClassById('about', 'active', 'fade_in', 'animated');
+    removeClassById('about', 'fade_out', 'hidden');
+    // resume
+    removeClassById('resume', 'fade_in', 'active', 'animated');
+    addClassById('resume', 'fade_out', 'hidden');
+    // service
+    removeClassById('service', 'fade_in', 'active', 'animated');
+    addClassById('service', 'fade_out', 'hidden');
+    // portfolio
+    removeClassById('portfolio', 'fade_in', 'active', 'animated');
+    addClassById('portfolio', 'fade_out', 'hidden');
+    // contact
+    removeClassById('contact', 'fade_in', 'active', 'animated');
+    addClassById('contact', 'fade_out', 'hidden');
 
   })
+  getClass('.resume_link').addEventListener('click', () => {
+    // resume
+    removeClassById('resume', 'fade_out', 'hidden');
+    addClassById('resume', 'active', 'fade_in', 'animated');
+    // about
+    removeClassById('about', 'active', 'fade_in', 'animated');
+    addClassById('about', 'fade_out', 'hidden');
+    // service
+    removeClassById('service', 'fade_in', 'active', 'animated');
+    addClassById('service', 'fade_out', 'hidden');
+    // portfolio
+    removeClassById('portfolio', 'fade_in', 'active', 'animated');
+    addClassById('portfolio', 'fade_out', 'hidden');
+    // contact
+    removeClassById('contact', 'fade_in', 'active', 'animated');
+    addClassById('contact', 'fade_out', 'hidden');
 
+  })
+  getClass('.services_link').addEventListener('click', () => {
+    // service
+    addClassById('service', 'active', 'fade_in', 'animated');
+    removeClassById('service', 'fade_out', 'hidden');
+    // about
+    removeClassById('about', 'active', 'fade_in', 'animated');
+    addClassById('about', 'fade_out', 'hidden');;
+    // resume
+    removeClassById('resume', 'fade_in', 'active', 'animated');
+    addClassById('resume', 'fade_out', 'hidden');
+    // portfolio
+    removeClassById('portfolio', 'fade_in', 'active', 'animated');
+    addClassById('portfolio', 'fade_out', 'hidden');
+    // contact
+    removeClassById('contact', 'fade_in', 'active', 'animated');
+    addClassById('contact', 'fade_out', 'hidden');
+
+  })
+  getClass('.portfolio_link').addEventListener('click', () => {
+    // portfolio
+    addClassById('portfolio', 'fade_in', 'active', 'animated');
+    removeClassById('portfolio', 'fade_out', 'hidden');
+    // service
+    removeClassById('service', 'fade_in', 'active', 'animated');
+    addClassById('service', 'fade_out', 'hidden');
+    // resume
+    removeClassById('resume', 'fade_in', 'active', 'animated');
+    addClassById('resume', 'fade_out', 'hidden');
+    // about
+    removeClassById('about', 'active', 'fade_in', 'animated');
+    addClassById('about', 'fade_out', 'hidden');
+    // contact
+    removeClassById('contact', 'fade_in', 'active', 'animated');
+    addClassById('contact', 'fade_out', 'hidden');
+
+  })
+  getClass('.contact_link').addEventListener('click', () => {
+    // contact
+    addClassById('contact', 'fade_in', 'active', 'animated');
+    removeClassById('contact', 'fade_out', 'hidden');
+    // about
+    removeClassById('about', 'fade_in', 'active', 'animated');
+    addClassById('about', 'fade_out', 'hidden');
+    // service
+    removeClassById('service', 'fade_in', 'active', 'animated');
+    addClassById('service', 'fade_out', 'hidden');
+    // portfolio
+    removeClassById('portfolio', 'fade_in', 'active', 'animated');
+    addClassById('portfolio', 'fade_out', 'hidden');
+    // resume
+    removeClassById('resume', 'fade_in', 'active', 'animated');
+    addClassById('resume', 'fade_out', 'hidden');
+
+  })
 }
-if (window.innerWidth >= phone_width) {
-  side_bar.classList.add('active_left');
+if (window.innerWidth >= large_phone_width) {
+  addClassById('side_bar', 'active_left');
 }
 // condition will be 768px and down
 if (window.innerWidth <= tablet_width) {
@@ -98,192 +167,14 @@ if (window.innerWidth <= tablet_width) {
 } else {
   open_nav.classList.remove('open_nav_show');
 }
+//condition will work when width under laptop_width
 if (window.innerWidth <= laptop_width) {
-  // about classes
-  about.classList.remove('active');
-  about.classList.remove('fade_in');
-  about.classList.remove('fade_out');
-  about.classList.remove('animated');
-  // resume classes
-  resume.classList.remove('fade_in');
-  resume.classList.remove('fade_out');
-  resume.classList.remove('animated');
-  resume.classList.remove('hidden');
-  // service classes
-  service.classList.remove('fade_in');
-  service.classList.remove('fade_out');
-  service.classList.remove('animated');
-  service.classList.remove('hidden');
-  // porfolio classes
-  portfolio.classList.remove('fade_in');
-  portfolio.classList.remove('fade_out');
-  portfolio.classList.remove('animated');
-  portfolio.classList.remove('hidden');
-  // contact classes
-  contact.classList.remove('fade_in');
-  contact.classList.remove('fade_out');
-  contact.classList.remove('animated');
-  contact.classList.remove('hidden');
-
+  removeClassById('about', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
+  removeClassById('resume', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
+  removeClassById('service', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
+  removeClassById('portfolio', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
+  removeClassById('contact', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
 }
-
-// condition will be 1024px  up add event
-if (window.innerWidth >= desltop_width) {
-  about_link.addEventListener('click', () => {
-    about.classList.add('active');
-    about.classList.add('fade_in');
-    about.classList.remove('fade_out');
-    about.classList.add('animated');
-
-    resume.classList.remove('fade_in');
-    resume.classList.add('fade_out');
-    resume.classList.remove('animated');
-    resume.classList.add('hidden');
-
-    service.classList.remove('fade_in');
-    service.classList.add('fade_out');
-    service.classList.remove('animated');
-    service.classList.add('hidden');
-
-    portfolio.classList.remove('fade_in');
-    portfolio.classList.add('fade_out');
-    portfolio.classList.remove('animated');
-    portfolio.classList.add('hidden');
-
-    contact.classList.remove('fade_in');
-    contact.classList.add('fade_out');
-    contact.classList.remove('animated');
-    contact.classList.add('hidden');
-
-  })
-  resume_link.addEventListener('click', () => {
-    about.classList.remove('active');
-    about.classList.remove('fade_in');
-    about.classList.add('fade_out');
-    about.classList.remove('animated');
-    about.classList.add('hidden');
-
-    resume.classList.add('active');
-    resume.classList.add('fade_in');
-    resume.classList.remove('fade_out');
-    resume.classList.add('animated');
-    resume.classList.remove('hidden');
-
-    service.classList.remove('active');
-    service.classList.remove('fade_in');
-    service.classList.add('fade_out');
-    service.classList.remove('animated');
-    service.classList.add('hidden');
-
-    portfolio.classList.remove('active');
-    portfolio.classList.remove('fade_in');
-    portfolio.classList.add('fade_out');
-    portfolio.classList.remove('animated');
-    portfolio.classList.add('hidden');
-
-    contact.classList.remove('active');
-    contact.classList.remove('fade_in');
-    contact.classList.add('fade_out');
-    contact.classList.remove('animated');
-    contact.classList.add('hidden');
-
-  })
-  services_link.addEventListener('click', () => {
-    about.classList.remove('active');
-    about.classList.remove('fade_in');
-    about.classList.add('fade_out');
-    about.classList.remove('animated');
-    about.classList.add('hidden');
-
-    resume.classList.remove('active');
-    resume.classList.remove('fade_in');
-    resume.classList.add('fade_out');
-    resume.classList.remove('animated');
-    resume.classList.add('hidden');
-
-    service.classList.add('active');
-    service.classList.add('fade_in');
-    service.classList.remove('fade_out');
-    service.classList.add('animated');
-    service.classList.remove('hidden');
-
-    portfolio.classList.remove('active');
-    portfolio.classList.remove('fade_in');
-    portfolio.classList.add('fade_out');
-    portfolio.classList.remove('animated');
-    portfolio.classList.add('hidden');
-
-    contact.classList.remove('active');
-    contact.classList.remove('fade_in');
-    contact.classList.add('fade_out');
-    contact.classList.remove('animated');
-    contact.classList.add('hidden');
-  })
-  portfolio_link.addEventListener('click', () => {
-    about.classList.remove('active');
-    about.classList.remove('fade_in');
-    about.classList.add('fade_out');
-    about.classList.remove('animated');
-    about.classList.add('hidden');
-
-    resume.classList.remove('active');
-    resume.classList.remove('fade_in');
-    resume.classList.add('fade_out');
-    resume.classList.remove('animated');
-    resume.classList.add('hidden');
-
-    service.classList.remove('active');
-    service.classList.remove('fade_in');
-    service.classList.add('fade_out');
-    service.classList.remove('animated');
-    service.classList.add('hidden');
-
-    portfolio.classList.add('active');
-    portfolio.classList.add('fade_in');
-    portfolio.classList.remove('fade_out');
-    portfolio.classList.add('animated');
-    portfolio.classList.remove('hidden');
-
-    contact.classList.remove('active');
-    contact.classList.remove('fade_in');
-    contact.classList.add('fade_out');
-    contact.classList.remove('animated');
-    contact.classList.add('hidden');
-
-  })
-  contact_link.addEventListener('click', () => {
-    about.classList.remove('active');
-    about.classList.remove('fade_in');
-    about.classList.add('fade_out');
-    about.classList.remove('animated');
-    about.classList.add('hidden');
-
-    resume.classList.remove('active');
-    resume.classList.remove('fade_in');
-    resume.classList.add('fade_out');
-    resume.classList.remove('animated');
-    resume.classList.add('hidden');
-
-    service.classList.remove('active');
-    service.classList.remove('fade_in');
-    service.classList.add('fade_out');
-    service.classList.remove('animated');
-    service.classList.add('hidden');
-
-    portfolio.classList.remove('active');
-    portfolio.classList.remove('fade_in');
-    portfolio.classList.add('fade_out');
-    portfolio.classList.remove('animated');
-    portfolio.classList.add('hidden');
-
-    contact.classList.add('active');
-    contact.classList.add('fade_in');
-    contact.classList.remove('fade_out');
-    contact.classList.add('animated');
-    contact.classList.remove('hidden');
-  })
-}
-
 light_mode.addEventListener('click', () => {
   light_mode.classList.remove('active');
   dark_mode.classList.add('active');
@@ -298,7 +189,7 @@ dark_mode.addEventListener('click', () => {
   logo_img.setAttribute('src', 'assets/images/logo/nkb.png');
 })
 // catagory
-let catagory_ul = all_class(".catagory_ul li");
+let catagory_ul = getAllClass(".catagory_ul li");
 catagory_ul.forEach((catagory_ul_li) => {
   catagory_ul_li.addEventListener("click", () => {
     catagory_ul.forEach((catagory_ul_li) => {
@@ -307,12 +198,10 @@ catagory_ul.forEach((catagory_ul_li) => {
     catagory_ul_li.classList.add("activeCaLi");
   });
 });
-
-let catagory_ul_li = all_class(".catagory_ul li span");
-let portfolio_cnt = all_class(".portfolio_contents .single_portfolio");
-
+let catagory_ul_li = getAllClass(".catagory_ul li span");
+let portfolio_cnt = getAllClass(".portfolio_contents .single_portfolio");
 let filterPortfolio = (e) => {
-  query(".active").classList.remove("active");
+  getClass(".active").classList.remove("active");
   e.target.classList.add("active");
 
   portfolio_cnt.forEach((single_project) => {
@@ -325,12 +214,9 @@ let filterPortfolio = (e) => {
     }
   });
 };
-
 catagory_ul_li.forEach((span) =>
   span.addEventListener("click", filterPortfolio)
 );
-
-
 // typeing
 var typedText = new Typed("#typedText", {
   strings: ["Web-Designer", " ", "Web-Developer", " ", "freelancer"],

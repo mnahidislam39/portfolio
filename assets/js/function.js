@@ -1,17 +1,29 @@
 // id return function
-function id(get_id) {
-   const id = document.getElementById(get_id);
-   return id;
+function getId(get_id) {
+   const selcetId = document.getElementById(get_id);
+   return selcetId;
 };
 
 // clsss all return Function
-function all_class(get_all_class) {
-   const all_class = document.querySelectorAll(get_all_class);
-   return all_class;
+function getAllClass(all_class) {
+   const selectAllClass = document.querySelectorAll(all_class);
+   return selectAllClass;
 };
 // query_select  return Function
-function query(get_query_select) {
-   const query = document.querySelector(get_query_select);
-   return query;
+function getClass(get_class) {
+   const selectClass = document.querySelector(get_class);
+   return selectClass;
 };
 
+// get id and add class
+function addClassById(elementId, FClass, SClass, TClass, FrtClass, fiftClass) {
+   const element = document.getElementById(elementId);
+   element.classList.add(FClass, SClass, TClass, FrtClass, fiftClass);
+   return element;
+};
+// get id and remove class
+function removeClassById(elementId, FClass, SClass, TClass, FrtClass, fiftClass) {
+   const element = document.getElementById(elementId);
+   element.classList.remove(FClass, SClass, TClass, FrtClass, fiftClass);
+   return element;
+};
