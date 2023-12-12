@@ -40,6 +40,13 @@ window.addEventListener('scroll', () => {
       removeClassById('go_top', 'active_top');
     }
   }
+  let scrollTimeout;
+  clearTimeout(scrollTimeout);
+  document.getElementById("open").classList.add("hidden");
+  scrollTimeout = setTimeout(function () {
+    document.getElementById("open").classList.remove("hidden");
+  }, 300);
+
 })
 // addEventListener condition will work when desktop_width and up 
 if (window.innerWidth >= desktop_width) {
@@ -226,6 +233,8 @@ var typedText = new Typed("#typedText", {
   backSpeed: 50,
   loop: true,
 });
+
+
 
 $('.project_icon_link_galleryVew').magnificPopup({
   type: 'image',
