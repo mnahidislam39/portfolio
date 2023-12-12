@@ -1087,7 +1087,7 @@
             align-items: center;
             justify-items: center;
             position: relative;
-            height: 250px;
+            height: 200px;
             transition: all 0.5s;
 
             img {
@@ -1333,6 +1333,16 @@
           .details {
             .buttons {
               flex-wrap: wrap;
+            }
+          }
+        }
+      }
+
+      .portfolio {
+        .portfolios {
+          .portfolio_contents {
+            .single_portfolio {
+              height: 250px;
             }
           }
         }

@@ -965,7 +965,7 @@ p {
   align-items: center;
   justify-items: center;
   position: relative;
-  height: 250px;
+  height: 200px;
   transition: all 0.5s;
 }
 .main_area .container .portfolio .portfolios .portfolio_contents .single_portfolio img {
@@ -1138,6 +1138,9 @@ p {
   }
   .main_area .container .home .home_contents .details .buttons {
     flex-wrap: wrap;
+  }
+  .main_area .container .portfolio .portfolios .portfolio_contents .single_portfolio {
+    height: 250px;
   }
   .main_area .container .contact .contact_field .contect_left .contact_info_sec {
     grid-template-columns: repeat(3, 1fr);
