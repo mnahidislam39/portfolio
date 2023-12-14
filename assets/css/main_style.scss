@@ -38,12 +38,14 @@
     .service {
       .service_contents {
         .single_service {
+          box-shadow: 0 0 15px -12px var(--dark) !important;
+
           &:hover {
             span {
               color: var(--primary) !important;
             }
 
-            box-shadow: 0 0 5px -1px var(--dark) !important;
+            box-shadow: 0 0 12px -8px var(--dark) !important;
           }
 
           span,
@@ -858,7 +860,7 @@
           padding: 25px;
           width: 100%;
           height: 250px;
-          box-shadow: 0 0 4px -2px var(--primary);
+          box-shadow: 0 0 20px -15px var(--primary);
           text-transform: capitalize;
           transition: 0.3s;
           border-radius: 2px;
@@ -890,7 +892,7 @@
           }
 
           &:hover {
-            box-shadow: 0 0 5px -1px var(--secondary);
+            box-shadow: 0 0 25px -18px var(--secondary);
             border-radius: 0;
 
             span {
