@@ -48,6 +48,7 @@ window.addEventListener('scroll', () => {
   }, 300);
 
 })
+
 // addEventListener condition will work when desktop_width and up 
 if (window.innerWidth >= desktop_width) {
   logo.addEventListener('click', () => {
@@ -172,6 +173,11 @@ if (window.innerWidth <= laptop_width) {
   removeClassById('service', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
   removeClassById('portfolio', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
   removeClassById('contact', 'active', 'fade_in', 'fade_out', 'animated', 'hidden');
+
+  logo.addEventListener('click', () => {
+    logo.setAttribute('href', '#home');
+  })
+
 }
 light_mode.addEventListener('click', () => {
   light_mode.classList.remove('active');
@@ -234,7 +240,23 @@ var typedText = new Typed("#typedText", {
   loop: true,
 });
 
+let numberPercent = document.querySelectorAll('.countbar')
+let getPercent = Array.from(numberPercent)
 
+getPercent.map((items) => {
+  let startCount = 0
+  let progressBar = () => {
+    startCount++
+    items.innerHTML = `<h3>${startCount}%</h3>`
+    items.style.width = `${startCount}%`
+    if (startCount == items.dataset.percentnumber) {
+      clearInterval(stop)
+    }
+  }
+  let stop = setInterval(() => {
+    progressBar()
+  }, 25)
+})
 
 $('.project_icon_link_galleryVew').magnificPopup({
   type: 'image',

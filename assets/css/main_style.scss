@@ -1,5 +1,6 @@
 @import "./base/all";
 
+// dark area
 .main_area {
 
   .dark_is_on {
@@ -637,7 +638,7 @@
     .about {
       .about_contents {
         color: var(--dark);
-        ;
+
 
         .about_info {
           text-transform: initial;
@@ -744,9 +745,65 @@
                 span {
                   color: var(--primary);
                 }
+              }
+
+              .skills {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                width: 100%;
+
+                .progress {
+
+                  .title {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 2px;
+
+                    h3 {
+                      text-transform: uppercase;
+                      font-weight: 500;
+                    }
+                  }
 
 
+                  .barline {
+                    height: 5px;
+                    background: #c8d6e5;
+                    border-radius: 20px;
 
+                    .countbar {
+                      height: 5px;
+                      background-color: var(--primary);
+                      border-top-left-radius: 20px;
+                      border-bottom-left-radius: 20px;
+                      position: relative;
+
+                      h3 {
+                        position: absolute;
+                        right: -19px;
+                        top: -35px;
+                        background-color: var(--primary);
+                        color: var(--light);
+                        padding: 4px 6px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        border-radius: 5px;
+
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          bottom: -10px;
+                          left: 50%;
+                          width: 11px;
+                          height: 11px;
+                          background-color: var(--primary);
+                          transform: rotate(45deg) translateX(-60%);
+                        }
+
+                      }
+                    }
+                  }
+                }
 
               }
             }
@@ -756,69 +813,17 @@
               flex-direction: column;
               grid-gap: 20px;
 
-              .skills {
-                grid-template-columns: repeat(1, 1fr);
-                gap: 5px;
-                justify-items: start;
-
-              }
-            }
-
-            .single_skill {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              text-transform: uppercase;
-              position: relative;
-              width: 90%;
-
-              &::before {
-                position: absolute;
-                content: '';
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-                border-bottom: 3px solid var(--primary);
-              }
-
-              @keyframes left {
-                100% {
-                  transform: rotate(180deg);
-                }
-              }
-
-              @keyframes right {
-                100% {
-                  transform: rotate(180deg);
-                }
-              }
-
-              span {
-                font-size: 16px;
-                text-transform: uppercase;
-                text-align: center;
-                z-index: 1;
-              }
-
-              .count {
-                color: var(--primary);
-              }
             }
 
             .back_end {
               gap: 20px;
 
-              .skills {
-                grid-template-columns: repeat(1, 1fr);
-                gap: 10px;
-                width: 100%;
-
-              }
             }
           }
         }
       }
+
+
     }
 
     // resume
@@ -1227,7 +1232,7 @@
               transition: 0.3s;
               border: 0;
               border-radius: 0;
-              background: var(--primary);
+              background-color: var(--primary);
               color: var(--light);
 
               &:hover {
@@ -1251,6 +1256,8 @@
 
   }
 }
+
+
 
 // media width 768px and up
 @media (min-width:768px) {
