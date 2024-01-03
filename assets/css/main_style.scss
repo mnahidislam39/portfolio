@@ -1467,7 +1467,7 @@
       .about {
         .about_contents {
           .about_info {
-            @include grid_cols_2;
+            @include grid_cols_1;
             gap: 15px;
           }
 

@@ -1,3 +1,4 @@
+AOS.init();
 // select id
 const side_bar = getId('side_bar');
 const open_nav = getId('open_nav');
@@ -183,14 +184,14 @@ light_mode.addEventListener('click', () => {
   light_mode.classList.remove('active');
   dark_mode.classList.add('active');
   container.classList.add('dark_is_on');
-  logo_img.setAttribute('src', 'assets/images/logo/nk.png');
+  // logo_img.setAttribute('src', 'assets/images/logo/nk.png');
 
 })
 dark_mode.addEventListener('click', () => {
   dark_mode.classList.remove('active');
   light_mode.classList.add('active');
   container.classList.remove('dark_is_on');
-  logo_img.setAttribute('src', 'assets/images/logo/nkb.png');
+  // logo_img.setAttribute('src', 'assets/images/logo/nkb.png');
 })
 // nav_li
 const nav_li = getAllClass('.nav .ul li');
