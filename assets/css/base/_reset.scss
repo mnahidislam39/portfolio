@@ -20,12 +20,12 @@ body {
   border: 0;
   text-decoration: none;
   list-style-type: none;
-  text-transform: capitalize;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  // text-transform: capitalize;
+  // -webkit-transition: all 0.3s ease-in-out;
+  // -moz-transition: all 0.3s ease-in-out;
+  // -ms-transition: all 0.3s ease-in-out;
+  // -o-transition: all 0.3s ease-in-out;
+  // transition: all 0.3s ease-in-out;
 
 
 }
@@ -100,6 +100,19 @@ h2,
 h3,
 h4,
 h5,
+h6 {
+  text-transform: capitalize;
+}
+
+p {
+  text-transform: initial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 p {
   margin-left: 0;
@@ -153,14 +166,14 @@ p {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   -khtml-border-radius: 0 4px 4px 0;
-  transition: visibility 1s linear,
-    opacity 0s linear;
-  -moz-transition: visibility 1s linear,
-    opacity 0s linear;
-  -webkit-transition: visibility 1s linear,
-    opacity 0s linear;
-  -o-transition: visibility 1s linear,
-    opacity 0s linear;
+  // transition: visibility 1s linear,
+  //   opacity 0s linear;
+  // -moz-transition: visibility 1s linear,
+  //   opacity 0s linear;
+  // -webkit-transition: visibility 1s linear,
+  //   opacity 0s linear;
+  // -o-transition: visibility 1s linear,
+  //   opacity 0s linear;
 }
 
 
