@@ -235,7 +235,7 @@ catagory_ul_li.forEach((span) =>
 );
 // typeing
 var typedText = new Typed("#typedText", {
-  strings: ["Web-Designer", " ", "Web-Developer"],
+  strings: ["Creative Designer", " ", "Full-Stack Developer"],
   typeSpeed: 80,
   backSpeed: 50,
   loop: true,
